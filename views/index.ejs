@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+</head>
+<body>
+	<h1>Today's Tasks to Do</h1>
+	<% for( let index = 0; index < data.length; index++ ) { %>
+		<h3><li>Tasks: <%= data[index].task %> </li></h3>
+		<ul>Priority: <%= data[index].priority %></ul>
+		<a href="/tasks/_id">Details</a>
+	<% } %>
+	<br>
+	<br>
+	<button>
+		<a href="/tasks/newtasks">Add Task</a>
+	</button>
+</body>
+</html>
